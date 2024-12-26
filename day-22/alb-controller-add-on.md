@@ -11,11 +11,15 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kubernetes-sigs/aws-lo
 
 Create IAM Policy
 
-```
+``` (ubuntu/powershell)
 aws iam create-policy \
     --policy-name AWSLoadBalancerControllerIAMPolicy \
     --policy-document file://iam_policy.json
 ```
+aws iam create-policy `
+    --policy-name AWSLoadBalancerControllerIAMPolicy `
+    --policy-document file://policy.json
+---
 
 Create IAM Role
 
