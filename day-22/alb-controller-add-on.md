@@ -3,7 +3,10 @@
 Download IAM policy
 
 ```
-curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
+curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json    ------ >>> this is for ubuntu os
+
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json" -OutFile "iam_policy.json"  ----->> this is for windows Powershell
+
 ```
 
 Create IAM Policy
