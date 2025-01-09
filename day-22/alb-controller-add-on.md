@@ -31,6 +31,15 @@ eksctl create iamserviceaccount \
   --role-name AmazonEKSLoadBalancerControllerRole \
   --attach-policy-arn=arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
   --approve
+
+eksctl create iamserviceaccount `
+  --cluster dev-personal-cluster `
+  --namespace develop `
+  --name aws-develop-ns-load-balancer-controller `
+  --role-name aws-develop-ns-AmazonEKSLoadBalancerControllerRole `
+  --attach-policy-arn arn:aws:iam::129733197923:policy/AWSLoadBalancerControllerIAMPolicy `
+  --approve
+
 ```
 
 ## Deploy ALB controller
